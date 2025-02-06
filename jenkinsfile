@@ -5,11 +5,26 @@ pipeline {
       }
     }
     stages {
-        stage("Hello aldi") {
+
+        stage("Build") {
             steps {
-                echo("Hello Alditya")
+                echo("Hello Build")
             }
         }
+
+        stage("Test") {
+            steps {
+                echo("Hello Test")
+		sh("error")
+            }
+        }
+
+        stage("Deploy") {
+            steps {
+                echo("Hello Deploy")
+            }
+        }
+
     }
 
     post {
